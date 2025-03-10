@@ -7,7 +7,7 @@ public class SceneTransition : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player")) // When colliding with player game object
         {
             EndScene();
         }
@@ -15,15 +15,15 @@ public class SceneTransition : MonoBehaviour
 
     public void ReloadScene()
     {
-        SceneManager.LoadScene("demoScene_free");
+        SceneManager.LoadScene("demoScene_free"); // Loads the demo scene
     }
     public void EndScene()
     {
-        Cursor.lockState = CursorLockMode.None;
-        SceneManager.LoadScene("EndScene");
+        Cursor.lockState = CursorLockMode.None; // Sets Cursor to visable state
+        SceneManager.LoadScene("EndScene"); // Loads the ending scene
     }
     public void CloseGame()
     {
-        Application.Quit();
+        Application.Quit(); // Closes game
     }
 }

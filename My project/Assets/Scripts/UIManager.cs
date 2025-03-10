@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    public TextMeshProUGUI inventoryText;
-    public AudioSource audioSource;
-    public AudioClip itemAddedSound;
+    public TextMeshProUGUI inventoryText; // Text for inventory UI
+    public AudioSource audioSource; // Reference to audio source
+    public AudioClip itemAddedSound; // Audio sound file
 
     void OnEnable()
     {

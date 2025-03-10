@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class CharacterController : MonoBehaviour
 {
-    public Rigidbody rb;
+    public Rigidbody rb; // Player rigidbody
 
-    public float speed = 12f;
-    public float gravity = -9.81f;
-    public float jumpHeight = 3f;
+    public float speed = 12f; // Variable that controls players move speed
+    public float gravity = -9.81f; // Variable that controls how fast the player falls
+    public float jumpHeight = 3f; // Variable that controls jump height
 
-    public Transform groundCheck;
-    public float groundDistance = 0.4f;
-    public LayerMask groundMask;
+    public Transform groundCheck; // Transform that checks for ground layer
+    public float groundDistance = 0.4f; // Distance to check from transform
+    public LayerMask groundMask; // Ground layer to check if grounded
 
-    private Vector3 velocity;
-    private bool isGrounded;
+    private Vector3 velocity; // Used to calculate speed of player
+    private bool isGrounded; // Bool that checks if player is grounded
 
     void Start()
     {
-        // Get the Rigidbody if not already assigned
+        // Get the Rigidbody
         if (rb == null)
         {
             rb = GetComponent<Rigidbody>();
